@@ -1,0 +1,15 @@
+stringlist =  ['bobo','hayop']
+userinput = input("Enter a word")
+list = userinput.lower().split()
+wordlist = ["bobo","hayop"]
+hasdetected = False
+for word in list:
+    for swear in wordlist:
+        if word.find (swear) > -1:
+            print("!"*len(swear),end=" ")
+            hasdetected = True
+            break
+        else:
+            hasdetected = False
+    if not hasdetected:
+        print(word,end="")
